@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,10 +13,18 @@ class MainActivity : AppCompatActivity() {
 
         val simpanButton = findViewById<Button>(R.id.simpanButton)
         val batalButton = findViewById<Button>(R.id.batalButton)
+
         val namaEditText = findViewById<EditText>(R.id.namaEditText)
+        val noHandphoneEditText= findViewById<EditText>(R.id.noHandphoneEditText)
+        val tglLahirEditText= findViewById<EditText>(R.id.tglLahirEditText)
+        val jarakEditText= findViewById<EditText>(R.id.jarakEditText)
 
         simpanButton.setOnClickListener{
-            namaEditText.setText("Faidur Rahman")
+            val nama = namaEditText.text.toString()
+            var jarak = jarakEditText.text.toString().toInt()
+            jarak = jarak * 1000
+
+            Toast.makeText(this, "Namamu adalah $nama", Toast.LENGTH_SHORT).show()
         }
 
         batalButton.setOnClickListener{

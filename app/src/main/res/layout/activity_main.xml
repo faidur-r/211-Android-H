@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nama"/>
+        android:text="@string/nama"/>
 
     <EditText
         android:id="@+id/namaEditText"
@@ -25,9 +25,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"/>
+        android:text="@string/email"/>
 
     <EditText
+        android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
@@ -37,20 +38,23 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No. Handphone"/>
+        android:text="@string/noHP"/>
 
     <EditText
+        android:id="@+id/noHandphoneEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
         />
 
     <TextView
+        android:id="@+id/tanggalLahirEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tanggal Lahir"/>
+        android:text="@string/tglLahir"/>
 
     <EditText
+        android:id="@+id/tglLahirEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="datetime"
@@ -59,9 +63,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jarak (KM)"/>
+        android:text="@string/jarak"/>
 
     <EditText
+        android:id="@+id/jarakEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
@@ -77,7 +82,7 @@
             android:id="@+id/simpanButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Simpan"
+            android:text="@string/simpan"
             android:layout_marginEnd="8dp"
             android:drawableLeft="@drawable/ic_baseline_save_24"
             />
@@ -86,7 +91,7 @@
             android:id="@+id/batalButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Batal"
+            android:text="@string/batal"
             android:drawableLeft="@drawable/ic_baseline_cancel_24"
             />
 
