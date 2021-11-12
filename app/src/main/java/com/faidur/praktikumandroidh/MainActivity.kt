@@ -21,10 +21,12 @@ class MainActivity : AppCompatActivity() {
 
         simpanButton.setOnClickListener{
             val nama = namaEditText.text.toString()
+            val noHP = noHandphoneEditText.text.toString()
+            val tglLahir = tglLahirEditText.text.toString()
             var jarak = jarakEditText.text.toString().toInt()
-            jarak = jarak * 1000
+            jarak *= 1000
 
-            Toast.makeText(this, "Namamu adalah $nama", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Halo $nama !\nNo HP : $noHP\nTanggal Lahir : $tglLahir\nJaraknya adalah $jarak M", Toast.LENGTH_SHORT).show()
         }
 
         batalButton.setOnClickListener{
