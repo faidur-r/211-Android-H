@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val simpanButton = findViewById<Button>(R.id.simpanButton)
         val batalButton = findViewById<Button>(R.id.batalButton)
+        val logoutButton = findViewById<Button>(R.id.logoutButton)
 
         val namaEditText = findViewById<EditText>(R.id.namaEditText)
         val emailEditText = findViewById<EditText>(R.id.emailEditText)
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             var jarak = jarakEditText.text.toString().toInt()
             jarak *= 1000
 
-            Toast.makeText(this, "Halo $nama !\nEmail : $email\nNo HP : $noHP\nTanggal Lahir : $tglLahir\nJaraknya adalah $jarak M", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Data berhasil disimpan", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this, HasilActivity::class.java)
             intent.putExtra("nama", nama)
@@ -42,6 +43,19 @@ class MainActivity : AppCompatActivity() {
 
         batalButton.setOnClickListener{
             finish()
+        }
+
+        logoutButton.setOnClickListener {
+            val sharedPreferences = this.getSharedPreferences("MY_SP", MODE_PRIVATE)
+
+            with(sharedPreferences.edit()) {
+                putString("username", "")
+                putString("password", "")
+                apply()
+            }
+
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 }
